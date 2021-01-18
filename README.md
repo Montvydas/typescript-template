@@ -40,7 +40,7 @@ $ npm i lite-server --save-dev
 $ tsc --init
 ```
 
-4. In the created tsconfig.json uncomment outDir and rootDir lines and structure project by adding src and dest folders. Add all .ts to src and remove .js from the project if such exist. Now adjust the config file:
+4. In the created tsconfig.json uncomment outDir and rootDir lines and structure project by adding src and dest folders. Add all .ts to src and remove .js from the project if such exist. Now adjust the config file by changing the target to es6, linking src and dest folders and disabling .js files generation if .ts fails:
 
 ```
 ...
@@ -49,6 +49,7 @@ $ tsc --init
     "outDir": "./dest",
     "rootDir": "./src",
 ...
+    "noEmitOnError": true,
 ```
 
 
